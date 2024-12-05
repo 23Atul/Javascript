@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+
+    </div>
+</body>
+</html>
+
+<script>
+
+    // steps to creat element
+    // 1. create element using document.createElement("element")
+    // 2. add innerText or innerHTML
+    // 3. append the created element in body for display
+
+    let arr=["Atul", "Raman", "Roma", "Ram", "Krishna", "Amit" , "Verma", "Supriti", "Lata", "Devi", "Kumar"];
+
+    arr.forEach(function(el){
+
+        let name = document.createElement("h1");
+
+        name.innerText=el;
+
+        document.querySelector("#container").append(name);
+    
+    })
+
+</script>
+

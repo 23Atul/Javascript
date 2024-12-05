@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    /* Style for the container */
+    #container {
+        max-width: 100vw;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        /* Space between cards */
+        justify-content: center;
+        padding: 20px;
+    }
+
+    /* Style for each card */
+    .card {
+        width: 200px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 15px;
+        text-align: center;
+        background-color: #f9f9f9;
+    }
+
+    /* Styling for card content */
+    .card h2 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    .card p {
+        font-size: 1em;
+        margin: 5px 0;
+        color: #555;
+    }
+</style>
+
+<body>
+    <div id="container">
+
+    </div>
+</body>
+</html>
+
+<script>
+    const users = [
+            { name: "Atul", age: 30, place: "India" },
+            { name: "Sophia", age: 25, place: "USA" },
+            { name: "Liam", age: 35, place: "Canada" },
+            { name: "Emma", age: 28, place: "Australia" },
+            { name: "Noah", age: 40, place: "Germany" },
+            { name: "Olivia", age: 32, place: "UK" },
+            { name: "Aarav", age: 29, place: "India" },
+            { name: "Isabella", age: 27, place: "Italy" },
+            { name: "Elijah", age: 33, place: "South Africa" },
+            { name: "Mia", age: 26, place: "Brazil" }
+        ];
+
+    function displayUsers(users){
+        users.map(function (el,i,arr){
+
+            let box = document.createElement("div");
+            box.className="card";
+            let name = document.createElement("h2");
+            let age = document.createElement("p");
+            let place = document.createElement("p");
+
+
+            name.innerText=el.name;
+            age.innerText=`age: ${el.age}`;
+            place.innerText=`place ${el.place}`;
+
+
+
+
+            box.append(name,age,place)
+            document.querySelector("#container").append(box);
+        });
+    }
+
+    displayUsers(users)
+    
+
+
+
+
+
+</script>
