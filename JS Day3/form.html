@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>choose state</h1>
+    <select name="state" id="state">
+        <option value="" disabled selected hidden>Select an option</option>
+        <option value="Jharkhand">Jharkhand</option>
+        <option value="Bihar">Bihar</option>
+        <option value="Uttar Pradesh">Uttar Pradesh</option>
+    </select>
+</body>
+</html>
+
+
+<script>
+    document.querySelector("select").addEventListener("change",selectOption);
+
+    function selectOption(){
+        let y= document.querySelector("select").value;
+
+        console.log(y);
+    }
+</script>

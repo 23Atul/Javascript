@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div{
+            display: inline-block;
+            margin-left: 50vw ;
+        }
+    </style>
+</head>
+<body>
+    <div>
+            <h1>0</h1>
+            <button id="decrement">-</button>
+            <button id="increment">+</button>
+    </div>
+
+</body>
+</html>
+
+<script>
+    document.querySelector("#increment").addEventListener("click",incrementIt);
+    document.querySelector("#decrement").addEventListener("click",decrementIt);
+
+
+    
+
+    count=0;
+
+    function incrementIt()
+    {
+        document.querySelector("h1").innerText=++count;
+    }
+
+    function decrementIt() {
+            document.querySelector("h1").innerText = --count;
+        }
+
+
+
+    let x=document.querySelectorAll("button");
+    for (let i =0;i<x.length;i++){
+        x[i].style.color="red";
+        x[i].style.padding="10px"
+        // x[i].innerText.style.fontSize="8px"
+    }
+
+</script>
