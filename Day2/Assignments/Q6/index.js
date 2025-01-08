@@ -3,11 +3,11 @@
 // • Example Input: "1 2 3 4"
 // • Expected Output: "[2, 4, 6, 8]"
 
-let str = "1 2 3 4";
-let arr1 = str. split(" "); // string to array, but elements are still string
+let str1 = "1 2 3 4";
+let arr1 = str1. split(" "); // string to array, but elements are still string
 
 let res1 = arr1.map((el) => el*2);  // string converts to number explicitly
-console.log(res1);
+// console.log(res1);
 
 
 
@@ -16,6 +16,11 @@ console.log(res1);
 // • Example Input: "1, 2, 3, 4, 5"
 // • Expected Output: "[2, 4]"
 
+let str2 = "1, 2, 3, 4";
+let arr2 =  str2.split(",").map(Number)
+
+let res2 = arr2.filter((el)=> el%2==0);
+console.log((res2));
 
 
 // 3. Reducing Arrays:
