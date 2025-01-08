@@ -37,9 +37,10 @@ c();
 })();
 
 
+
 // call back function -- when a function is called from inside of another function then the called function is called call back function; and the calling function is called HOF (higher order function)
 
-//HOF // when a function accepts function as an parameter then it is called HOF
+//HOF // when a function accepts function as an argument  or returns a function then it is called HOF
 function washClothes(name, count, cb) {  // cb==ironClothes
     console.log(`${name}'s ${count} clothes are washed`);
     cb(name,count); // we can pass value as well inside call back
@@ -52,4 +53,4 @@ function ironClothes(name,count){
 }
 
 
-washClothes("Atul", 20, ironClothes) // passing function as argument, do not invoke here
+washClothes("Atul", 20, ironClothes) // passing function as parameter, do not invoke here
