@@ -11,3 +11,15 @@ console.log(res1);
 
 
 
+// 2. Filtering Data:
+// • "Ask the user for a list of integers separated by commas. Create a function that uses the filter HOF to extract even numbers from the input and display them."
+// • Example Input: "1, 2, 3, 4, 5"
+// • Expected Output: "[2, 4]"
+
+let str2 = "1, 2, 3, 4";
+let arr2 = str2.split(",").map(Number)  // Convert all elements to numbers
+
+let res2 = arr2.filter((el) => el % 2 == 0);
+console.log((res2));
+
+
